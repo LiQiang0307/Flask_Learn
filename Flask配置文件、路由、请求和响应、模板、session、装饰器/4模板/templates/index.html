@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    {{k1}}
+</h1>
+<h1>
+    {{k2.0}} {{k2[0]}}
+</h1>
+<h1>
+    {{k3.name}} {{k3['name']}} {{k3['age']}}
+</h1>
+<h1>
+    <!--    可以传函数-->
+    {{k4}}
+    {{k4(66)}}
+</h1>
+
+<h1>
+    {{k5(99)}}
+    {{k5(99)|safe}}
+</h1>
+
+</body>
+</html>
