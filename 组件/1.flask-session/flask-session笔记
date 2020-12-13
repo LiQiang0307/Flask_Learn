@@ -1,0 +1,18 @@
+flask-session
+
+作用：将默认保存的签名cookie中的值保存到  redis/memcached/file/Mongodb/SQLAlchemy
+
+应用：
+    a.配置(或者写到配置文件中去)
+        app.config['SESSION_TYPE']='redis'
+        app.config['SESSSION_REDIS']=Redis(host='127.0.0.1',port='6397')
+    b.替换
+        from flask_session import Session
+        Session(app)
+    
+    注意：session中存储的是字典，修改字典内部元素时，会造成数据不更新
+    - motified=True
+    - SESSION_REFERESH_EACH_REQUEST=True
+    - session.permanent=True(redis中默认为True)
+     
+        
