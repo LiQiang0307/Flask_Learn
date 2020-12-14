@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+</head>
+<body>
+<form method="post">
+    {{ form.user }} {{ form.user.errors }}
+    {{ form.pwd }} {{ form.pwd.errors }}
+    <input type="submit" value="提交">
+</form>
+{{ msg }}
+</body>
+</html>

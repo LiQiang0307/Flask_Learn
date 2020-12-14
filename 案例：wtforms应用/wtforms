@@ -1,0 +1,19 @@
+wtforms
+作用：用于对Python web 框架做表单验证
+使用：
+    class MyForm(Form):
+        字段=类（正则，插件）
+        字段=类（正则，插件）
+        字段=类（正则，插件）
+        字段=类（正则，插件）
+
+    form = MyForm()
+    #生成html标签
+    print(form.user)
+
+
+    #验证
+    form=MyForm(formdata=request.form)
+    if form.validate():
+        #内部找到所有的字段  user + 用户发过来的数据 =》正则校验
+
